@@ -1,0 +1,19 @@
+server:
+  port: 8761
+
+spring:
+  application:
+    name: eureka-server
+#  Prevents this service from registering itself with Eureka.Because this is the Eureka Server itself, not a client.
+#  Prevents the server from fetching service registry from another Eureka server.
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+#  This config exposes Actuator endpoints.
+#  Spring Boot Actuator is used for monitoring and health checking.
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
