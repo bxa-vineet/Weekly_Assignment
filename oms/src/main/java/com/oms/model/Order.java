@@ -18,6 +18,7 @@ public class Order {
     private LocalDateTime createdAt;
 
     public double totalAmount() {
+
         return price * quantity;
     }
 }

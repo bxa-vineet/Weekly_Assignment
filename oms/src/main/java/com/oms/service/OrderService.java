@@ -45,6 +45,7 @@ private void process(Order o) {
 }
 
 public Collection<Order> getAll() {
+
     return store.values();
 }
 

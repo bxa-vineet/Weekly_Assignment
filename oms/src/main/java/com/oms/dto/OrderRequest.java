@@ -9,18 +9,22 @@ public class OrderRequest {
     private OrderType type;
 
     public String getCustomer() {
+
         return customer;
     }
 
     public double getPrice() {
+
         return price;
     }
 
     public int getQuantity() {
+
         return quantity;
     }
 
     public OrderType getType() {
+
         return type;
     }
 }

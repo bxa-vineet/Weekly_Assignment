@@ -3,8 +3,8 @@ package com.oms.controller;
 import com.oms.dto.*;
 import com.oms.model.*;
 import com.oms.service.*;
-import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.*;
+import lombok.RequiredArgsConstructor;// Automatically generates a constructor for all final fields
+import org.springframework.web.bind.annotation.*;//It imports all Spring Web annotations
 
 import java.time.LocalDateTime;
 import java.util.*;
@@ -18,7 +18,7 @@ public class OrderController {
 
     @PostMapping
     public Order place(@RequestBody OrderRequest req) {
-        System.out.println("true");
+
         return service.place(Order.builder()
                 .customer(req.getCustomer())
                 .price(req.getPrice())
